@@ -21,7 +21,6 @@ def greed():
         greed="Good evening"
         return greed
 speak("please tell me your name")
-# speak(greed()+" cherry")
 
 def listen():
     r=sr.Recognizer()
@@ -89,6 +88,10 @@ if __name__ == "__main__":
             elif user_choice=='quit':
                 z=computer_win+tied+user_win
                 z=str(z)
+                user_win=str(user_win)
+                computer_win=str(computer_win)
+                tied=str(tied)
+                
                 speak('total matches played '+ z )
                 print('total matches played '+ z )
                 speak(search_keyword +' win '+user_win +' matches')
@@ -146,6 +149,9 @@ if __name__ == "__main__":
                 elif user_choice=='quit':
                     z=computer_win+tied+user_win
                     z=str(z)
+                    user_win=str(user_win)
+                    computer_win=str(computer_win)
+                    tied=str(tied)
                     speak('total matches played '+ z )
                     print('total matches played '+ z )
                     speak(search_keyword +' win '+user_win +' matches')
@@ -157,9 +163,3 @@ if __name__ == "__main__":
                     speak('game quit')
                     print('game quit!!')
                     quit()
-
-    # while True:
-    #     t-=1
-    #     search_keyword=listen().lower()
-    #     if search_keyword == 'yes':
-    #         speak('stone paper scissor')
